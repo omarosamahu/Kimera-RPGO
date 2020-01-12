@@ -13,11 +13,11 @@
       "variables": [
         {
           "name": "GTSAM_DIR",
-          "value": "E:\\kimera-slam\\gtsam\\out\\install\\x64-Debug\\CMake",
+          "value": "PATH_TO_GTSAM_BUILD_DIR",
           "type": "PATH"
         }
       ],
-      "cmakeToolchain": "//dev-ramadan/vcpkg/scripts/buildsystems/vcpkg.cmake"
+      "PATH_TO_YOUR_TOOLCHAIN"
     },
     {
       "name": "x64-Release",
@@ -28,12 +28,12 @@
       "cmakeCommandArgs": "",
       "buildCommandArgs": "-v",
       "ctestCommandArgs": "",
-      "cmakeToolchain": "E:/work/vcpkg-clone/scripts/buildsystems/vcpkg.cmake",
+      "cmakeToolchain": "PATH_TO_YOUR_TOOLCHAIN",
       "inheritEnvironments": [ "msvc_x64_x64" ],
       "variables": [
         {
           "name": "GTSAM_DIR",
-          "value": "E:\\kimera-slam\\gtsam\\out\\install\\x64-Release\\CMake",
+          "value": "PATH_TO_GTSAM_BUILD_DIR",
           "type": "PATH"
         }
       ]
