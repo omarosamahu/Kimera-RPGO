@@ -1,1 +1,1 @@
-gtsamAddTestsGlob(OutlierTests "test*.cpp" "" KimeraRPGO)
+#gtsamAddTestsGlob(OutlierTests "test*.cpp" "" KimeraRPGO)

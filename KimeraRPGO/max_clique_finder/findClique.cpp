@@ -139,12 +139,12 @@ int maxClique(CGraphIO* gio, int l_bound, vector<int>* max_clique_data) {
   delete[] bitVec;
   max_clique_data_inter.clear();
 
-#ifdef _DEBUG
-  cout << "Pruning 1 = " << pruned1 << endl;
-  cout << "Pruning 2 = " << pruned2 << endl;
-  cout << "Pruning 3 = " << pruned3 << endl;
-  cout << "Pruning 5 = " << pruned5 << endl;
-#endif
+//#ifdef _DEBUG
+//  cout << "Pruning 1 = " << pruned1 << endl;
+//  cout << "Pruning 2 = " << pruned2 << endl;
+//  cout << "Pruning 3 = " << pruned3 << endl;
+//  cout << "Pruning 5 = " << pruned5 << endl;
+//#endif
 
   return maxClq;
 }

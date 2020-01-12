@@ -33,9 +33,14 @@ bool fexists(const char* filename) {
 
 double wtime()  // returns wall time in seconds
 {
-  timeval tv;
+  std::chrono::time_point<std::chrono::system_clock> s;
+  std::chrono::time_point<std::chrono::system_clock> s1;
+  s = std::chrono::system_clock::now();
+  double t_val = std::chrono::duration_cast<std::chrono::seconds>(s-s1).count();
+  return t_val;
+  /*timeval tv;
   gettimeofday(&tv, NULL);
-  return (double)tv.tv_sec + (double)tv.tv_usec / 1000000;
+  return (double)tv.tv_sec + (double)tv.tv_usec / 1000000;*/
 }
 
 void usage(char* argv0) {

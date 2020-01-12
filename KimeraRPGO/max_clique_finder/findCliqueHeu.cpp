@@ -21,8 +21,7 @@
 /*   http://arxiv.org/abs/1411.7460 */
 
 #include <stdlib.h>
-#include <sys/time.h>
-#include <unistd.h>
+#include <chrono>
 #include <cstddef>
 #include "findClique.h"
 

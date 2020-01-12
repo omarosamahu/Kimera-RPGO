@@ -1,10 +1,6 @@
 cmake_minimum_required (VERSION 3.5)
 project(KimeraRPGO VERSION 1.0 LANGUAGES CXX)
 
-if(NOT CMAKE_BUILD_TYPE)
-  set(CMAKE_BUILD_TYPE Release)
-endif()
-
 IF(APPLE)
     # Fix linking on 10.14+. See https://stackoverflow.com/questions/54068035
     LINK_DIRECTORIES(/usr/local/lib)
@@ -29,7 +25,7 @@ endif()
 
 ###########################################################################
 # Compile
-add_library(KimeraRPGO SHARED
+add_library(KimeraRPGO STATIC
   KimeraRPGO/logger.h
   KimeraRPGO/GenericSolver.cpp
   KimeraRPGO/RobustSolver.cpp
@@ -60,14 +56,14 @@ target_include_directories(KimeraRPGO
 add_executable(RpgoReadG2o examples/RpgoReadG2o.cpp)
 target_link_libraries(RpgoReadG2o KimeraRPGO)
 
-###########################################################################
+##########################################################################
 # Tests
-include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/UnitTesting.cmake)
-add_subdirectory(tests)
-add_subdirectory(KimeraRPGO/outlier/tests)
-add_subdirectory(KimeraRPGO/utils/tests)
-set(TEST_DATA_PATH "${CMAKE_CURRENT_SOURCE_DIR}/tests/data")
-configure_file(tests/test_config.h.in tests/test_config.h)
+#include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/UnitTesting.cmake)
+##add_subdirectory(tests)
+#add_subdirectory(KimeraRPGO/outlier/tests)
+#add_subdirectory(KimeraRPGO/utils/tests)
+#set(TEST_DATA_PATH "${CMAKE_CURRENT_SOURCE_DIR}/tests/data")
+#configure_file(tests/test_config.h.in tests/test_config.h)
 
 ###########################################################################
 # Installation
@@ -100,6 +96,6 @@ install(EXPORT kimera-rpgo-export
     KimeraRPGOTargets.cmake
     #NAMESPACE
     #NAKimeraRPGO::
-  DESTINATION
-    ${CMAKE_INSTALL_LIBDIR}/cmake/KimeraRPGO
+  DESTINATION 
+    ${CMAKE_INSTALL_LIBDIR}/cmake/KimeraRPGO 
 )

@@ -1,1 +1,1 @@
-gtsamAddTestsGlob(graph_utils "test*.cpp" "" "KimeraRPGO")
+#gtsamAddTestsGlob(graph_utils "test*.cpp" "" "KimeraRPGO")

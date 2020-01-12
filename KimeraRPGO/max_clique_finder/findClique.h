@@ -24,8 +24,7 @@
 #define KIMERARPGO_MAX_CLIQUE_FINDER_FINDCLIQUE_H_
 
 #include <stdlib.h>
-#include <sys/time.h>
-#include <unistd.h>
+#include <chrono>
 #include <cstddef>
 #include <iostream>
 #include <vector>
@@ -35,7 +34,7 @@
 using namespace std;
 
 #ifdef _DEBUG
-int DEBUG = 1;
+#define DEBUG 1
 #endif
 
 namespace FMC {
